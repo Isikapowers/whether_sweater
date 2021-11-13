@@ -6,8 +6,11 @@ RSpec.describe 'Unslash API Service' do
 
     expect(response).to be_a(Hash)
     expect(response[:results].first).to have_key(:urls)
+    expect(response[:results].first[:urls]).to have_key(:regular)
+    expect(response[:results].first[:links]).to have_key(:self)
     expect(response[:results].first).to have_key(:user)
-    expect(response[:results].first[:user]).to have_key(:profile_image)
+    expect(response[:results].first[:user]).to have_key(:links)
+    expect(response[:results].first[:user][:links]).to have_key(:self)
     expect(response[:results].first[:user]).to have_key(:username)
   end
 end
