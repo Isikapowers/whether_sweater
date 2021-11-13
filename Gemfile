@@ -9,6 +9,10 @@ gem 'rails', '~> 5.2.6'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+gem 'figaro'
+gem 'faraday'
+gem 'json'
+gem 'jsonapi-serializer'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -31,6 +35,17 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'orderly'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'simplecov'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'vcr', '~> 5.0'
+  gem 'webmock', '~> 3.7', '>= 3.7.6'
+  gem 'pry'
 end
 
 group :development do
