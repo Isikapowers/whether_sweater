@@ -18,7 +18,7 @@ RSpec.describe 'Background API' do
       expect(image[:data][:attributes][:image]).to have_key(:credit)
       expect(image[:data][:attributes][:image][:credit]).to have_key(:source)
       expect(image[:data][:attributes][:image][:credit]).to have_key(:author)
-      expect(image[:data][:attributes][:image][:credit]).to have_key(:logo)
+      expect(image[:data][:attributes][:image][:credit]).to have_key(:profile)
     end
 
     it 'returns an error when no params given' do
@@ -26,8 +26,8 @@ RSpec.describe 'Background API' do
 
       image = JSON.parse(response.body, symbolize_names: true)
 
-      # expect(image).to_not be_successful
-      # expect(image.status).to eq(400)
+      expect(response).to have_http_status(400)
+      expect(response).to_not be_successful
       expect(image[:error]).to eq('cannot find background image')
     end
   end
