@@ -9,6 +9,15 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def find
+    if params[:email].present?
+      user = User.search_by_email(params[:email])
+      render json: UsersSerializer.new(user), status: :ok
+    else
+      render json: { error: 'no valid email given' }, status: :not_found
+    end
+  end
+
   private
 
   def user_params
