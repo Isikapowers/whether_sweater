@@ -46,6 +46,7 @@ group :development, :test do
   gem 'vcr', '~> 5.0'
   gem 'webmock', '~> 3.7', '>= 3.7.6'
   gem 'pry'
+  gem 'travis'
 end
 
 group :development do
