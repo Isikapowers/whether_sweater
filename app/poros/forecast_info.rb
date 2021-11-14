@@ -10,7 +10,6 @@ class ForecastInfo
     @daily_weather = get_daily_weather(details[:daily][0..4])
     @hourly_weather = get_hourly_weather(details[:hourly][0..7])
   end
-  
 
   private
 

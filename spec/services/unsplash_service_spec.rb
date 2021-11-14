@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Unslash API Service' do
   it 'can connect to unsplash API' do
-    response = UnsplashService.search_images("denver,co")
+    response = UnsplashService.search_images('denver,co')
 
     expect(response).to be_a(Hash)
     expect(response[:results].first).to have_key(:urls)

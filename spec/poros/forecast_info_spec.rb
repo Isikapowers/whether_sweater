@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Forecast Poros' do
-  describe "#initialize" do
-    it "exists and returns forecast info object" do
+  describe '#initialize' do
+    it 'exists and returns forecast info object' do
       info = VCR.use_cassette('forecast_info') do
         ForecastFacade.get_forecast('denver')
       end

@@ -56,7 +56,7 @@ RSpec.describe 'Forecast API' do
         expect(hour).to_not have_key(:feels_like)
         expect(hour).to_not have_key(:humidity)
         expect(hour).to_not have_key(:dew_point)
-     end
+      end
     end
 
     it 'returns an error when params not given' do

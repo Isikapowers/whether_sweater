@@ -7,5 +7,5 @@ class UnsplashService < BaseService
       req.headers['Content-Type'] = 'application/json'
     end
     parse_json(response)
-  end    
+  end
 end

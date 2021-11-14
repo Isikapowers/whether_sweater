@@ -8,9 +8,9 @@ RSpec.describe 'Users API' do
   describe 'POST new user' do
     it 'creats user in the database' do
       user_params = {
-           email: 'lucy@gmail.com',
-           password: 'password',
-           password_confirmation: 'password'
+        email: 'lucy@gmail.com',
+        password: 'password',
+        password_confirmation: 'password'
       }
 
       post '/api/v1/users', params: user_params, as: :json
@@ -31,9 +31,9 @@ RSpec.describe 'Users API' do
 
     it 'returns an error if email is blank' do
       user_params = {
-           email: '',
-           password: 'password',
-           password_confirmation: 'password'
+        email: '',
+        password: 'password',
+        password_confirmation: 'password'
       }
 
       post '/api/v1/users', params: user_params, as: :json
@@ -47,9 +47,9 @@ RSpec.describe 'Users API' do
 
     it 'returns an error if password is blank' do
       user_params = {
-           email: 'loolo@gmail.com',
-           password: '',
-           password_confirmation: 'password'
+        email: 'loolo@gmail.com',
+        password: '',
+        password_confirmation: 'password'
       }
 
       post '/api/v1/users', params: user_params, as: :json
@@ -63,9 +63,9 @@ RSpec.describe 'Users API' do
 
     it 'returns an error if password is blank' do
       user_params = {
-           email: 'lula@gmail.com',
-           password: 'password',
-           password_confirmation: ''
+        email: 'lula@gmail.com',
+        password: 'password',
+        password_confirmation: ''
       }
 
       post '/api/v1/users', params: user_params, as: :json
@@ -79,9 +79,9 @@ RSpec.describe 'Users API' do
 
     it 'returns an error if password confirmation does not match' do
       user_params = {
-           email: 'lorwy@gmail.com',
-           password: 'password',
-           password_confirmation: 'password123'
+        email: 'lorwy@gmail.com',
+        password: 'password',
+        password_confirmation: 'password123'
       }
 
       post '/api/v1/users', params: user_params, as: :json

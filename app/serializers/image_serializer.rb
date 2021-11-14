@@ -3,13 +3,13 @@ class ImageSerializer
     {
       "data": {
         "id": image.id,
-        "type": "image",
+        "type": 'image',
         "attributes": {
           "image": {
             "location": image.location,
             "image_url": image.image_url,
             "credit": {
-              "source": "unsplash.com",
+              "source": 'unsplash.com',
               "author": image.author,
               "profile": image.profile
             }

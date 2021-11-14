@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :api do
     namespace :v1 do
       resources :forecast, only: [:index]
       resources :backgrounds, only: [:index]
-      resources :users, only: [:index, :create]
+      resources :users, only: %i[index create]
       resources :sessions
     end
   end

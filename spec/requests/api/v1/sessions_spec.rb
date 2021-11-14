@@ -3,9 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Sessions' do
   before :each do
     @user = User.create!({ email: 'user@example.com',
-                  password: 'password',
-                  password_confirmation: 'password' }
-                )
+                           password: 'password',
+                           password_confirmation: 'password' })
   end
 
   describe 'POST new session' do
@@ -23,13 +22,12 @@ RSpec.describe 'Sessions' do
       data = JSON.parse(response.body, symbolize_names: true)[:data]
 
       expect(data).to be_a(Hash)
-      expect(data[:type]).to eq("users")
+      expect(data[:type]).to eq('users')
       expect(data).to have_key(:id)
       expect(data).to have_key(:attributes)
       expect(data[:attributes]).to have_key(:email)
       expect(data[:attributes]).to have_key(:api_key)
       expect(data[:attributes][:api_key]).to eq(@user.api_key)
-
     end
 
     it 'returns an error when credentials are incorrect' do
