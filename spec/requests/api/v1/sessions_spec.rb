@@ -2,9 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Sessions' do
   before :each do
-    User.destroy_all
-    
-    User.create({ email: 'user@example.com',
+    @user = User.create!({ email: 'user@example.com',
                   password: 'password',
                   password_confirmation: 'password' }
                 )
@@ -20,7 +18,7 @@ RSpec.describe 'Sessions' do
       post '/api/v1/sessions', params: session_params, as: :json
 
       expect(response).to be_successful
-      expect(response.status).to eq(201)
+      expect(response.status).to eq(200)
 
       data = JSON.parse(response.body, symbolize_names: true)[:data]
 
@@ -30,6 +28,8 @@ RSpec.describe 'Sessions' do
       expect(data).to have_key(:attributes)
       expect(data[:attributes]).to have_key(:email)
       expect(data[:attributes]).to have_key(:api_key)
+      expect(data[:attributes][:api_key]).to eq(@user.api_key)
+
     end
 
     it 'returns an error when credentials are incorrect' do
@@ -41,7 +41,7 @@ RSpec.describe 'Sessions' do
       post '/api/v1/sessions', params: session_params, as: :json
 
       expect(response).to_not be_successful
-      expect(response.status).to eq(400)
+      expect(response.status).to eq(401)
 
       data = JSON.parse(response.body, symbolize_names: true)
 

@@ -1,17 +1,11 @@
 class Api::V1::SessionsController < ApplicationController
   def create
-    session = User.new(session_params)
-    if session.save
-      session.update(api_key: SecureRandom.hex(20))
-      render json: UsersSerializer.new(session), status: :created
+    user = User.find_by(email: params[:email])
+    if !user.nil? && user.authenticate(params[:password])
+      user.update(api_key: user.api_key)
+      render json: UsersSerializer.new(user)
     else
-      render json: { error: "Credentials are invalid.  Please try again." }, status: :bad_request
+      render json: { error: "Credentials are invalid.  Please try again." }, status: :unauthorized
     end
-  end
-
-  private
-
-  def session_params
-    params.permit(:email, :password)
   end
 end
