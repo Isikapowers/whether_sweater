@@ -47,7 +47,6 @@ workflows:
       - build
       - heroku/deploy-via-git:
           app-name: $HEROKU_APP_NAME
-          token: HEROKU_TOKEN
           requires:
             - build
           filters:
