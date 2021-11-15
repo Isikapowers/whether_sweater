@@ -37,9 +37,9 @@ jobs:
       - run:
           name: Setup DB
           command: bundle exec rails db:schema:load --trace
-      # - run:
-      #     name: Run test suite
-      #     command: bundle exec rspec
+      - run:
+          name: Run test suite
+          command: bundle exec rspec
 
 workflows:
   heroku_deploy:
@@ -47,6 +47,7 @@ workflows:
       - build
       - heroku/deploy-via-git:
           app-name: $HEROKU_APP_NAME
+          token: HEROKU_TOKEN
           requires:
             - build
           filters:
