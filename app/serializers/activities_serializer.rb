@@ -7,7 +7,7 @@ class ActivitiesSerializer
         "attributes": {
           "destination": "#{destination}",
           "forecast": {
-            "summary": "#{weather.current_weather[:condition]}",
+            "summary": "#{weather.current_weather[:conditions]}",
             "temperature": "#{weather.current_weather[:temperature]} F"
           },
           "activities": [
