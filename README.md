@@ -54,7 +54,7 @@
 ``` 
 
 ## Live App
-[Link to Heroku deployment](https://sweater-weather-denver.herokuapp.com/api/v1/users?email=danny@gmail.com)
+[Link to Heroku deployment(find user by email endpoint)](https://sweater-weather-denver.herokuapp.com/api/v1/users?email=danny@gmail.com)
 
 ## Tools Used
 
