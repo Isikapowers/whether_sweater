@@ -1,0 +1,27 @@
+{
+  "data": {
+    "id": "null",
+      "type": "activities",
+      "attributes": {
+      "destination": "chicago,il",
+      "forecast": {
+      "summary": "light snow",
+      "temperature": "33.19 F"
+      },
+      "activities": [
+      {
+      "title": "Listen to a new podcast",
+      "type": "relaxation",
+      "participants": 1,
+      "price": 0.05
+      },
+      {
+      "title": "Bake pastries for you and your neighbor",
+      "type": "cooking",
+      "participants": 1,
+      "price": 0.4
+      }
+      ]
+    }
+  }
+}
