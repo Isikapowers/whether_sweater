@@ -54,7 +54,7 @@
 ``` 
 
 ## Live App
-[Link to Heroku deployment](https:/sweater-weather-denver.herokuapp.com/api/v1/forecast)
+[Link to Heroku deployment](https://sweater-weather-denver.herokuapp.com/api/v1/users?email=danny@gmail.com)
 
 ## Tools Used
 
