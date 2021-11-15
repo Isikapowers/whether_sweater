@@ -65,11 +65,11 @@ RSpec.describe 'Activities API' do
     end
 
     it 'returns busywork activity when temp is between 50-60 F', :vcr do
-      VCR.use_cassette('weather between 50 and 60') do
-        ForecastFacade.get_forecast('la')
+      VCR.use_cassette('weather between 50-60') do
+        ForecastFacade.get_forecast('atlanta,ga')
       end
 
-      get '/api/v1/activities?destination=denver.co'
+      get '/api/v1/activities?destination=atlanta,ga'
 
       expect(response).to be_successful
       expect(response.status).to eq(200)
@@ -82,17 +82,17 @@ RSpec.describe 'Activities API' do
       expect(data).to have_key(:type)
       expect(data[:type]).to eq('activities')
 
-      expect(data[:attributes][:destination]).to eq('denver.co')
+      expect(data[:attributes][:destination]).to eq('atlanta,ga')
 
-      expect(data[:attributes][:forecast][:summary]).to eq('overcast clouds')
-      expect(data[:attributes][:forecast][:temperature]).to eq('43.03 F')
+      expect(data[:attributes][:forecast][:summary]).to eq('clear sky')
+      expect(data[:attributes][:forecast][:temperature]).to eq('57.79 F')
 
-      expect(data[:attributes][:activities].first[:title]).to eq('Shop at support your local farmers market')
+      expect(data[:attributes][:activities].first[:title]).to eq('Take your cat on a walk')
       expect(data[:attributes][:activities].first[:type]).to eq('relaxation')
       expect(data[:attributes][:activities].first[:participants]).to eq(1)
-      expect(data[:attributes][:activities].first[:price]).to eq(0.2)
+      expect(data[:attributes][:activities].first[:price]).to eq(0.02)
 
-      expect(data[:attributes][:activities].second[:title]).to eq('Bake pastries for you and your neighbor')
+      expect(data[:attributes][:activities].second[:title]).to eq('Organize your movie collection')
       expect(data[:attributes][:activities].second[:type]).to eq('busywork')
       expect(data[:attributes][:activities].second[:participants]).to eq(1)
       expect(data[:attributes][:activities].second[:price]).to eq(0)

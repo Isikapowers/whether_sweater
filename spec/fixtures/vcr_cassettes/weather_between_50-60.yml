@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 15 Nov 2021 19:11:15 GMT
+      - Mon, 15 Nov 2021 19:11:14 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
@@ -37,13 +37,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Mon, 15 Nov 2021 19:11:15 GMT
+      - Mon, 15 Nov 2021 19:11:14 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=8F21B71297FFB8772446CE3257007AF8; Path=/; HttpOnly; Secure
+      - JSESSIONID=CEC3F47DB3B7B3C77011F478BE09198A; Path=/; HttpOnly; Secure
       Status:
       - success
       Transactionweight:
@@ -55,9 +55,9 @@ http_interactions:
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"atlanta,ga"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Atlanta","adminArea5Type":"City","adminArea4":"Fulton
-        County","adminArea4Type":"County","adminArea3":"GA","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041693","unknownInput":"","type":"s","latLng":{"lat":33.748547,"lng":-84.391502},"displayLatLng":{"lat":33.748547,"lng":-84.391502},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<key>&type=map&size=225,160&locations=33.748547,-84.391502|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-735558074"}]}]}'
+        County","adminArea4Type":"County","adminArea3":"GA","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041693","unknownInput":"","type":"s","latLng":{"lat":33.748547,"lng":-84.391502},"displayLatLng":{"lat":33.748547,"lng":-84.391502},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<key>&type=map&size=225,160&locations=33.748547,-84.391502|marker-sm-50318A-1&scalebar=true&zoom=12&rand=1886420966"}]}]}'
     http_version: null
-  recorded_at: Mon, 15 Nov 2021 19:11:15 GMT
+  recorded_at: Mon, 15 Nov 2021 19:11:14 GMT
 - request:
     method: get
     uri: http://api.openweathermap.org/data/2.5/onecall?appid=<appid>&lat=33.748547&lon=-84.391502&units=imperial
@@ -158,90 +158,4 @@ http_interactions:
         rain","icon":"10d"}],"clouds":99,"pop":1,"rain":6.91,"uvi":4}]}'
     http_version: null
   recorded_at: Mon, 15 Nov 2021 19:11:15 GMT
-- request:
-    method: get
-    uri: http://www.boredapi.com/api/activity?type=relaxation
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Connection:
-      - keep-alive
-      X-Powered-By:
-      - Express
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Headers:
-      - Origin, X-Requested-With, Content-Type, Accept
-      Content-Type:
-      - application/json; charset=utf-8
-      Content-Length:
-      - '134'
-      Etag:
-      - W/"86-8I2tyGWT2BRwZpNrEw3+VvbvKzE"
-      Date:
-      - Mon, 15 Nov 2021 19:11:18 GMT
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"activity":"Take your cat on a walk","type":"relaxation","participants":1,"price":0.02,"link":"","key":"5940465","accessibility":0.1}'
-    http_version: null
-  recorded_at: Mon, 15 Nov 2021 19:11:18 GMT
-- request:
-    method: get
-    uri: http://www.boredapi.com/api/activity?type=busywork
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Connection:
-      - keep-alive
-      X-Powered-By:
-      - Express
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Headers:
-      - Origin, X-Requested-With, Content-Type, Accept
-      Content-Type:
-      - application/json; charset=utf-8
-      Content-Length:
-      - '134'
-      Etag:
-      - W/"86-/iskL7csf+rri6kj+j8Z78NOiHo"
-      Date:
-      - Mon, 15 Nov 2021 19:11:21 GMT
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"activity":"Organize your movie collection","type":"busywork","participants":1,"price":0,"link":"","key":"6378359","accessibility":0}'
-    http_version: null
-  recorded_at: Mon, 15 Nov 2021 19:11:21 GMT
 recorded_with: VCR 5.1.0
