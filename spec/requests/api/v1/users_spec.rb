@@ -93,4 +93,38 @@ RSpec.describe 'Users API' do
       expect(data[:error]).to eq(["Password confirmation doesn't match Password"])
     end
   end
+
+  describe 'FIND user by email' do
+    it 'returns user when search by email' do
+      user = User.create({email: 'user@example.com',
+                          password: 'password',
+                          password_confirmation: 'password'
+                        })
+
+      get '/api/v1/users?email=user@example.com'
+
+      data = JSON.parse(response.body, symbolize_names: true)[:data]
+
+      expect(response).to be_successful
+
+      expect(data).to be_a(Array)
+      expect(data.first[:attributes][:email]).to eq(user.email)
+    end
+
+    it 'returns error when no email given' do
+      User.create({email: 'user@example.com',
+                          password: 'password',
+                          password_confirmation: 'password'
+                        })
+
+      get '/api/v1/users?email='
+
+      data = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      
+
+      expect(data[:error]).to eq('no valid email given')
+    end
+  end
 end
