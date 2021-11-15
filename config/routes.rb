@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :users, only: [:create]
       get '/users', to: 'users#find'
       resources :sessions, only: [:create]
+      get '/book-search', to: 'books#index'
     end
   end
 end
