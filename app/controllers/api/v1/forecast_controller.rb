@@ -4,7 +4,6 @@ class Api::V1::ForecastController < ApplicationController
       forecast = ForecastFacade.get_forecast(params[:location])
 
       render json: ForecastSerializer.new(forecast), status: :ok
-
     else
       render json: { error: 'valid params not given' }, status: :bad_request
     end

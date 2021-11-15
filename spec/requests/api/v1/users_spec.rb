@@ -123,7 +123,6 @@ RSpec.describe 'Users API' do
 
       expect(response).to_not be_successful
       
-
       expect(data[:error]).to eq('no valid email given')
     end
   end
