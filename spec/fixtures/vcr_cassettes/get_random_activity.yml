@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.boredapi.com/api/activity?type=relaxation
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '157'
+      Etag:
+      - W/"9d-pjI0lpcEcnPAFs1XC7f5l9bp2X4"
+      Date:
+      - Mon, 15 Nov 2021 16:30:17 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"activity":"Go to the library and find an interesting book","type":"relaxation","participants":1,"price":0.05,"link":"","key":"8253550","accessibility":0.2}'
+    http_version: null
+  recorded_at: Mon, 15 Nov 2021 16:30:17 GMT
+recorded_with: VCR 5.1.0
