@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resources :users, only: [:create]
       get '/users', to: 'users#find'
       resources :sessions, only: [:create]
-      resources :road_trip, only: [:create]
+      resources :road_trip, only: [:index]
     end
   end
 end
