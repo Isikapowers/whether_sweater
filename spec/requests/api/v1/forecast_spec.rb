@@ -27,6 +27,7 @@ RSpec.describe 'Forecast API' do
       expect(forecast[:attributes][:current_weather]).to have_key(:visibility)
       expect(forecast[:attributes][:current_weather]).to have_key(:conditions)
       expect(forecast[:attributes][:current_weather]).to have_key(:icon)
+
       expect(forecast[:attributes][:current_weather]).to_not have_key(:pressure)
       expect(forecast[:attributes][:current_weather]).to_not have_key(:clouds)
       expect(forecast[:attributes][:current_weather]).to_not have_key(:rain)
@@ -66,7 +67,6 @@ RSpec.describe 'Forecast API' do
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
-      # expect(response[:error]).to eq('valid params not given')
     end
   end
 end
