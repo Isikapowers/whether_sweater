@@ -61,6 +61,7 @@
 **1. Application Landing Page**
 
 ![root](https://user-images.githubusercontent.com/72399033/142911208-019ba49c-935a-4814-ab30-0c52e0608248.png)
+  
   1a Retrive weather for a city
   
   Request:
@@ -136,7 +137,7 @@
    }
    ```
 
-**2. User Registration **
+**2. User Registration**
 
 ![sign_up](https://user-images.githubusercontent.com/72399033/142911731-3bc0d5f0-5c78-4033-92c1-cff56669c631.png)
 
@@ -248,15 +249,13 @@
 | Ruby 2.7.2     | SimpleCov            |
 | Rails 5.2.6    | Pry                  |
 | HTML5          | Capybara             |
-| Bootstrap      | ShouldaMatcher       |
+| Bcrypt         | ShouldaMatcher       |
 | Atom           | Launchy              |
-| Git            | Orderly              |
-| Github         | Factorybot/Faker     |
-| Github Project | Faraday              |
-| Postico        | RSpec                |
-| Heroku         | Travis CI            |
-| Bcrypt         | RuboCop              |
-
+| Git            | RuboCop              |
+| Github         | Circle CI            |
+| Heroku         | Faraday              |
+| PostgreSQL     | RSpec                |
+                           
 ## Contributor
 
 - [Isika Powers](https://github.com/Isikapowers/)
