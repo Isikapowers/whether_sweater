@@ -9,7 +9,6 @@
 * [Live App](#live-app)
 * [Endpoints](#end-points)
 * [Tools Used](#tools-used)
-* [Contributors](#contributors)
 
 ## Description
 
@@ -256,6 +255,4 @@
 | Heroku         | Faraday              |
 | PostgreSQL     | RSpec                |
                            
-## Contributor
 
-- [Isika Powers](https://github.com/Isikapowers/)
