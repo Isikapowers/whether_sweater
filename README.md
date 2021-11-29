@@ -9,7 +9,6 @@
 * [Live App](#live-app)
 * [Endpoints](#end-points)
 * [Tools Used](#tools-used)
-* [Contributors](#contributors)
 
 ## Description
 
@@ -30,7 +29,7 @@
 - Deploy completed code to Heroku
 
 ## Database Schema
-![128953870-0b631c97-480e-4cbb-a913-3552d784b4a1](https://user-images.githubusercontent.com/72399033/142913102-cce8aab9-33b8-4391-9b0e-6273959a10c2.png)
+<img width="218" alt="Screen Shot 2021-11-29 at 3 17 40 PM" src="https://user-images.githubusercontent.com/72399033/143951601-fbc79720-d1aa-4893-aff1-aa3850776393.png">
 
 ## Setup
 * Fork this repository
@@ -234,8 +233,8 @@
         "end_city": "Estes Park, CO",
         "travel_time": "2 hours, 13 minutes"
           "weather_at_eta": {
-          "temperature": 59.4,
-          "conditions": "partly cloudy with a chance of meatballs"
+            "temperature": 59.4,
+            "conditions": "partly cloudy with a chance of meatballs"
          }
        }
     }
@@ -248,14 +247,13 @@
 | :-------------:| :-------------------:|
 | Ruby 2.7.2     | SimpleCov            |
 | Rails 5.2.6    | Pry                  |
-| HTML5          | Capybara             |
-| Bcrypt         | ShouldaMatcher       |
+| HTML5          | Launchy              |
+| Bcrypt         | RSpec                |      
 | Atom           | Launchy              |
 | Git            | RuboCop              |
 | Github         | Circle CI            |
-| Heroku         | Faraday              |
-| PostgreSQL     | RSpec                |
-                           
-## Contributor
-
-- [Isika Powers](https://github.com/Isikapowers/)
+| Heroku         |                      |
+| PostgreSQL     |                      |
+| JSONSerializer |                      |     
+| Faraday        |                      |
+| SecureRandom   |                      |
