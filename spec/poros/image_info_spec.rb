@@ -9,7 +9,7 @@ RSpec.describe 'Image Info Poros' do
 
       expect(info).to be_a(ImageInfo)
       expect(info.id).to eq('NflJmUuaYVI')
-      expect(info.image_url).to eq("https://images.unsplash.com/photo-1602800458591-eddda28a498b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzUyNDB8MHwxfHNlYXJjaHwxfHxkZW52ZXJ8ZW58MHx8fHwxNjM3NjA0Nzkz&ixlib=rb-1.2.1&q=80&w=1080")
+      expect(info.image_url).to eq('https://images.unsplash.com/photo-1602800458591-eddda28a498b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzUyNDB8MHwxfHNlYXJjaHwxfHxkZW52ZXJ8ZW58MHx8fHwxNjM4MjI0Mzk0&ixlib=rb-1.2.1&q=80&w=1080')
       expect(info.profile).to eq('https://api.unsplash.com/users/andrewcoop')
       expect(info.author).to eq('andrewcoop')
       expect(info.location).to eq('denver')
