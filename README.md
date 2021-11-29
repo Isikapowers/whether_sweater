@@ -247,12 +247,13 @@
 | :-------------:| :-------------------:|
 | Ruby 2.7.2     | SimpleCov            |
 | Rails 5.2.6    | Pry                  |
-| HTML5          | Capybara             |
-| Bcrypt         | ShouldaMatcher       |
+| HTML5          | Launchy              |
+| Bcrypt         | RSpec                |      
 | Atom           | Launchy              |
 | Git            | RuboCop              |
 | Github         | Circle CI            |
-| Heroku         | Faraday              |
-| PostgreSQL     | RSpec                |
-                           
-
+| Heroku         |                      |
+| PostgreSQL     |                      |
+| JSONSerializer |                      |     
+| Faraday        |                      |
+| SecureRandom   |                      |
